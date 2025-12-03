@@ -27,20 +27,21 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 
 ### 1. Searched the `DeviceFileEvents` Table
 
-Searched for any file that had the string "tor" in it and discovered what looks like the user "employee" downloaded a TOR installer, did something that resulted in many TOR-related files being copied to the desktop, and the creation of a file called `tor-shopping-list.txt` on the desktop at `2024-11-08T22:27:19.7259964Z`. These events began at `2024-11-08T22:14:48.6065231Z`.
+Searched the DeviceFileEvents table for ANY file that had the string “tor” in it, and discovered what looks like to be the user “n3bula” downloading a Tor installer. User then did something that created many Tor files to the desktop and the creation of the file “tor-shopping-list.txt” on the desktop.  These events started at 2025-12-02T01:34:00.7166522Z.
 
 **Query used to locate events:**
 
 ```kql
-DeviceFileEvents  
-| where DeviceName == "threat-hunt-lab"  
-| where InitiatingProcessAccountName == "employee"  
-| where FileName contains "tor"  
-| where Timestamp >= datetime(2024-11-08T22:14:48.6065231Z)  
-| order by Timestamp desc  
-| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
+DeviceFileEvents
+| where DeviceName == "lab-test-n3bula"
+| where InitiatingProcessAccountName == "n3bula"
+| where FileName contains "tor"
+| where Timestamp >= datetime(2025-12-02T01:34:00.7166522Z)
+| project Timestamp, DeviceName, FolderPath, FileName, SHA256, Account = InitiatingProcessAccountName
+
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/71402e84-8767-44f8-908c-1805be31122d">
+<img width="1038" height="350" alt="image" src="https://github.com/user-attachments/assets/b0852f0f-99a4-42b5-878c-2fb551163682" />
+
 
 ---
 
