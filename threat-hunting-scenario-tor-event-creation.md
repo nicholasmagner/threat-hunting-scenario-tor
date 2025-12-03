@@ -69,15 +69,15 @@ DeviceNetworkEvents
 
 // User shopping list was created and, changed, or deleted
 DeviceFileEvents
-| where FileName contains "shopping-list.txt"
+| where FileName contains "tor-shopping-list.txt"
 ```
 
 ---
 
 ## Created By:
-- **Author Name**: Josh Madakor
-- **Author Contact**: https://www.linkedin.com/in/joshmadakor/
-- **Date**: August 31, 2024
+- **Author Name**: Nicholas Magner
+- **Author Contact**: https://www.linkedin.com/in/nicholas-magner/
+- **Date**: December 2, 2025
 
 ## Validated By:
 - **Reviewer Name**: 
@@ -92,6 +92,6 @@ DeviceFileEvents
 ---
 
 ## Revision History:
-| **Version** | **Changes**                   | **Date**         | **Modified By**   |
-|-------------|-------------------------------|------------------|-------------------|
-| 1.0         | Initial draft                  | `September  6, 2024`  | `Josh Madakor`   
+| **Version** | **Changes**                   | **Date**            | **Modified By**   |
+|-------------|-------------------------------|---------------------|-------------------|
+| 1.0         | Initial draft                 | `December 2, 2025`  | `Nicholas Magner`   
