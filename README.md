@@ -111,7 +111,7 @@ DeviceNetworkEvents
 - **Timestamp:** `Dec 1, 2025 8:33:43 PM`
 - **Event:** The user "n3bula" downloaded a file named `tor-browser-windows-x86_64-portable-15.0.2.exe` to the Downloads folder.
 - **Action:** File download detected.
-- **File Path:** `C:\Users\n3bula\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
+- **File Path:** `C:\Users\n3bula\Downloads\tor-browser-windows-x86_64-portable-15.0.2.exe`
 
 ### 2. Process Execution - TOR Browser Installation
 
